@@ -31,7 +31,7 @@ for r in [.33, .25, .10, .05]:
         #alright this is where you are currently, be better tomorrow
         test_score_third = {}
         train_score_third = {}
-        for j in range(1000):
+        for j in range(100):
         
     #Gausian Distribution
             gnb = GaussianNB()
@@ -44,7 +44,7 @@ for r in [.33, .25, .10, .05]:
             
     
     #Decision Tree
-            clf = DecisionTreeClassifier()
+            clf = DecisionTreeClassifier(criterion='gini', max_depth=(1))
             clf = clf.fit(X_train, Y_train)
             predict = clf.predict(X_test)
             DT_tree = []
@@ -96,7 +96,7 @@ for r in [.33, .25, .10, .05]:
         test_score_quart = {}
         train_score_quart = {}
         
-        for t in range(1000):
+        for t in range(100):
         
     #Gausian Distribution
             gnb = GaussianNB()
@@ -109,7 +109,7 @@ for r in [.33, .25, .10, .05]:
             
     
     #Decision Tree
-            clf = DecisionTreeClassifier()
+            clf = DecisionTreeClassifier(criterion='gini', max_depth=(1))
             clf = clf.fit(X_train, Y_train)
             predict = clf.predict(X_test)
             DT_tree = []
@@ -160,7 +160,7 @@ for r in [.33, .25, .10, .05]:
         test_score_ten = {}
         train_score_ten = {}
     
-        for s in range(1000):
+        for s in range(100):
         
     #Gausian Distribution
             gnb = GaussianNB()
@@ -173,7 +173,7 @@ for r in [.33, .25, .10, .05]:
             
     
     #Decision Tree
-            clf = DecisionTreeClassifier()
+            clf = DecisionTreeClassifier(criterion='gini', max_depth=(1))
             clf = clf.fit(X_train, Y_train)
             predict = clf.predict(X_test)
             DT_tree = []
@@ -223,7 +223,7 @@ for r in [.33, .25, .10, .05]:
     else:
         test_score_final = {}
         train_score_final = {}
-        for q in range(1000):
+        for q in range(100):
         
     #Gausian Distribution
             gnb = GaussianNB()
@@ -236,7 +236,7 @@ for r in [.33, .25, .10, .05]:
             
     
     #Decision Tree
-            clf = DecisionTreeClassifier()
+            clf = DecisionTreeClassifier(criterion='gini', max_depth=(1))
             clf = clf.fit(X_train, Y_train)
             predict = clf.predict(X_test)
             DT_tree = []
